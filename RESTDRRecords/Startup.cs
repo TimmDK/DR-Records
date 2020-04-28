@@ -43,13 +43,13 @@ namespace RESTDRRecords
             }
 
             app.UseHttpsRedirection();
-            app.UseCors(
+            /*app.UseCors(
                 options =>
                 {
                     options.AllowAnyOrigin().AllowAnyMethod(); 
 
                 }
-            );
+            );*/
             app.UseMvc();
         }
     }

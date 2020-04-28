@@ -10,6 +10,8 @@ namespace RESTDRRecords.Models
         private string _title;
         private string _artist;
         private int _releaseYear;
+        private int _id;
+        private static int _idCounter = 0;
 
         public Record()
         {
@@ -21,6 +23,14 @@ namespace RESTDRRecords.Models
             _title = title;
             _artist = artist;
             _releaseYear = releaseYear;
+            Id = _idCounter;
+            _idCounter++;
+        }
+
+        public int Id
+        {
+            get => _id;
+            set => _id = value;
         }
 
         public string Title
